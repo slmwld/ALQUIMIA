@@ -1,17 +1,23 @@
 <ion-header>
-  <ion-navbar>
-    <ion-title>
+  <ion-navbar color="dark">
+    <ion-title text-center>
       Contact
     </ion-title>
   </ion-navbar>
 </ion-header>
 
 <ion-content>
-  <ion-list>
-    <ion-list-header>Follow us on Twitter</ion-list-header>
-    <ion-item>
-      <ion-icon name="ionic" item-start></ion-icon>
-      @ionicframework
-    </ion-item>
-  </ion-list>
+
+    <ion-refresher (ionRefresh)="recargar($event)">
+        <ion-refresher-content></ion-refresher-content>
+      </ion-refresher>
+      
+  <button ion-button
+          block
+          color="primary" 
+          round
+          (click)="doAlert()">
+          FaceboocAlquimia    
+          <ion-icon name="logo-facebook"></ion-icon>
+  </button>
 </ion-content>

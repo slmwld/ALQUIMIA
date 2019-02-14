@@ -8,6 +8,11 @@
 
 <ion-content padding>
 
+    <ion-refresher (ionRefresh)="recargar($event)">
+        <ion-refresher-content></ion-refresher-content>
+      </ion-refresher>
+    
+
 
   <ion-card 
   *ngFor="let currentCard of _datacards ">

@@ -8,6 +8,17 @@
 
 <ion-content padding>
     <ion-content padding>
+
+
+        <ion-refresher (ionRefresh)="recargar($event)">
+            <ion-refresher-content></ion-refresher-content>
+          </ion-refresher>
+
+
+
+
+
+
         <ion-card>
             <video
               poster="assets/vids/01.png"
@@ -15,7 +26,7 @@
               <source src="assets/vids/01.mp4" type="video/mp4">
             </video>
             <ion-card-content>
-              <ion-card-title>Video 1</ion-card-title>
+              <ion-card-title>Productos</ion-card-title>
               <p>Contamos con un aplio surtido en postres para tener una experiencia unica con cada uno de nuestros productos</p>
             </ion-card-content>
           </ion-card>
@@ -27,7 +38,7 @@
                 <source src="assets/vids/02.mp4" type="video/mp4">
               </video>
               <ion-card-content>
-                <ion-card-title>Video 1</ion-card-title>
+                <ion-card-title>Un buen detalle</ion-card-title>
                 <p>Cada platillo es realizado con minucioso detalle  </p>
               </ion-card-content>
             </ion-card>
@@ -39,7 +50,7 @@
                   <source src="assets/vids/03.mp4" type="video/mp4">
                 </video>
                 <ion-card-content>
-                  <ion-card-title>Video 1</ion-card-title>
+                  <ion-card-title>Conocenos</ion-card-title>
                   <p>Ven y visitanos en Calle hidalgo #15, san Francisco Tlalcilalcalpan, Almoloya de uarez, estado de Mexico</p>
                 </ion-card-content>
               </ion-card>
