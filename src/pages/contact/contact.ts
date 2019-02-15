@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
-import { NavController, AlertController } from 'ionic-angular';
+import { NavController, AlertController, ModalController } from 'ionic-angular';
+import {Modal2Page} from "../index.pages";
 
 @Component({
   selector: 'page-contact',
@@ -9,7 +10,8 @@ export class ContactPage {
   private _datacards: any;
 
   constructor(public navCtrl: NavController,
-              public alertCtrl: AlertController) {}
+              public alertCtrl: AlertController,
+              private modalCtrl: ModalController) {}
   doAlert() {
     let alert = this.alertCtrl.create({
       title: 'Upss',
@@ -32,6 +34,11 @@ export class ContactPage {
       ];
       refresher.complete();
     } ,1500)
+  }
+
+  abrir_modal2(){
+
+    this.modalCtrl.create( Modal2Page ).present();
   }
 
 }

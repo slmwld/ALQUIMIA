@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
-import { NavController } from 'ionic-angular';
+import { NavController, ModalController } from 'ionic-angular';
+import {Modal1Page} from "../index.pages";
 
 @Component({
   selector: 'page-about',
@@ -8,7 +9,8 @@ import { NavController } from 'ionic-angular';
 export class AboutPage {
   private _datacards: any;
 
-  constructor(public navCtrl: NavController) {
+  constructor(public navCtrl: NavController,
+              private modarlCtrl: ModalController) {
 
   }
 
@@ -26,5 +28,11 @@ export class AboutPage {
       ];
       refresher.complete();
     } ,1500)
+  }
+  
+  abrir_modal1(){
+
+    this.modarlCtrl.create( Modal1Page ).present();
+
   }
 }

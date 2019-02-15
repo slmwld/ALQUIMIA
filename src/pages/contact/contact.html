@@ -11,7 +11,7 @@
     <ion-refresher (ionRefresh)="recargar($event)">
         <ion-refresher-content></ion-refresher-content>
       </ion-refresher>
-      
+      <ion-card>
   <button ion-button
           block
           color="primary" 
@@ -20,4 +20,17 @@
           FaceboocAlquimia    
           <ion-icon name="logo-facebook"></ion-icon>
   </button>
+
+</ion-card>
+
+<ion-card>
+  <button ion-button 
+  block
+  color="alquimia"
+  (click)="abrir_modal2()">
+
+saber mas...
+
+</button>
+</ion-card>
 </ion-content>
